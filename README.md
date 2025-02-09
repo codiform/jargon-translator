@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Corporate Jargon Translator
 
-## Getting Started
+A demonstration repository for building a corporate jargon translator using large language models. This is a deliberately simple project to make it easier to read and comprehend what's going on.
 
-First, run the development server:
+In the hopes that this will be useful for others, I'm doing the work in steps, and using branches to separate the steps so tha you can follow along.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+If you want to start at the beginning, start with the main branch.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Branch: NextJS 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This branch adds a NextJS front end to the project.  It's a very simple front-end: a text area and a button, as well as output:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![Screenshot of the front end in its initial state](./docs/form-empty.png)
 
-## Learn More
+This is just a UI, the LLM hasn't been integrated yet. To ensure the front end doesn't break, there's a placeholder API route that will randomly return a placeholder translation or error:
 
-To learn more about Next.js, take a look at the following resources:
+![Screenshot of the front end in its initial state](./docs/form-success.png)
+![Screenshot of the front end in its initial state](./docs/form-error.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Running the project
+You can run it in dev mode using one of the standard commands from your tool of choice (`yarn dev` or `npm run dev` or `pnpm dev`), and you may need to install dependencies first (`npm install` or `yarn install` or `pnpm install`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
