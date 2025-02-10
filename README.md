@@ -18,7 +18,7 @@ If you want to follow, you can choose from the following paths:
 
 - Next.js
   - You could build the user interface (shown above) using Next.js and then compare it to what I built 
-  - Or simply switch to the [nextjs](/codiform/jargon-translator/tree/nextjs) branch and look at my implementation
+  - Or simply switch to the [nextjs](https://github.com/codiform/jargon-translator/tree/nextjs) branch and look at my implementation
 
 I will likely build out other paths, but this is the first available.
 
