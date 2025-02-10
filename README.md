@@ -32,7 +32,7 @@ This is what a translation of a recent Meta layoff leak looks like:
 ![Meta Layoff Leak Translation](./docs/form-translation.png)
 
 ## Running the Demo
-You may need to install dependencies (`npm install` / `yarn install` / `pnpm install`) before running.
+You may need to install dependencies (`npm install` / `yarn install` /br `pnpm install`) before running.
 
 Once the packages are installed, you can run it in dev mode (`npm run dev` / `yarn dev` / `pnpm dev`) and then open your browser to [http://localhost:3000](http://localhost:3000).
 
