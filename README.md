@@ -7,22 +7,33 @@ In the hopes that this will be useful for others, I'm doing the work in steps, a
 ## Branches
 If you want to start at the beginning, start with the [main branch](https://github.com/codiform/jargon-translator/).
 
-If you want to jump forward to one of the next steps:
-- The [nextjs-bedrock](https://github.com/codiform/jargon-translator/tree/nextjs-bedrock) branch adds a simple integration to Claude 3.5 Haiku in Amazon Bedrock
+If you want to go back to the initial implementation of Next.js without the LLM integrated through Amazon Bedrock, try the [nextjs](https://github.com/codiform/jargon-translator/tree/nextjs) branch.
 
-I will likely add other branches here as well. I'm going to look at GitHub Models next, since it looks like that may allow me to deploy a demo site (with quotas) so that people can try it.
+There are still more enhancements that could be made here:
+- Streaming
+  - This would allow the LLM tokens to appear on screen as they're being generated, which is pretty standard for a chatbot-style interface.
+- Converse / Chat
+  - The current implementation is deliberately simplistic -- anything in the texbox is the statement to be translated. This does mean you can't easily guide the LLM to improve the translation.
+- Read from Web
+  - Rather than pasting snippets from a web page, what if you could translate a whole webpage, or ask the LLM to read a PR statement and at least provide a short (and darkly humorous) translation of the whole thing? 
 
-## This Branch: NextJS 
+If you want to try making some of those enhancements, feel free to submit a pull request. Otherwise, maybe I'll come back to those or other topics.
 
-This branch adds a NextJS front end to the project.  It's a very simple front-end: a text area and a button, as well as output:
+## This Branch: NextJS + Bedrock
 
-![Screenshot of the front end in its initial state](./docs/form-empty.png)
+This branch builds on the [nextjs](https://github.com/codiform/jargon-translator/tree/nextjs) branch, which built a front-end using Next.js, but didn't integrate with any LLMs.
 
-This is just a UI, the LLM hasn't been integrated yet. To ensure the front end doesn't break, there's a placeholder API route that will randomly return a placeholder translation or error:
+This branch adds the LLM integration using Amazon Bedrock:
+- The model I've used is Claude 3.5 Haiku using a `modelId` that works for me here in `ca-central-1`.
+- The authentication is not part of the code, so if you want to try this out, you'll need to have AWS credentials configured, request model access, make sure the modelId works for you ...
+- If you are having troubles running the demo, raise an issue and I'll see if I can help, or open up discussions on the repository.
 
-![Screenshot of the front end in its initial state](./docs/form-success.png)
-![Screenshot of the front end in its initial state](./docs/form-error.png)
+This is what a translation of a recent Meta layoff leak looks like:
+![Meta Layoff Leak Translation](./docs/form-translation.png)
 
-## Running the project
-You can run it in dev mode using one of the standard commands from your tool of choice (`yarn dev` or `npm run dev` or `pnpm dev`), and you may need to install dependencies first (`npm install` or `yarn install` or `pnpm install`).
+## Running the Demo
+You may need to install dependencies (`npm install` / `yarn install` / `pnpm install`) before running.
 
+Once the packages are installed, you can run it in dev mode (`npm run dev` / `yarn dev` / `pnpm dev`) and then open your browser to [http://localhost:3000](http://localhost:3000).
+
+If you don't already have AWS credentials set up, you may need to configure that using the aws configuration file, environment variables, etc. If you haven't interacted with bedrock, you may need to request access to models, and so on.
