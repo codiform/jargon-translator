@@ -52,7 +52,7 @@ export default function Home() {
                 <button
                     type="submit"
                     className="p-2 bg-blue-500 text-white rounded">
-                    Ask
+                    Translate
                 </button>
             </form>
             {botResponse != undefined && (
