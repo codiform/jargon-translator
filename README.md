@@ -22,4 +22,5 @@ If you want to follow, you can choose from the following paths:
 
 I will likely build out other paths, but this is the first available.
 
-## Discuss
+## What else?
+Feel free to raise issues, fork the repository. I'm open to enabling discussions on the repository, but I'm wait to see if there's interest.
