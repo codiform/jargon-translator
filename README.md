@@ -12,10 +12,14 @@ I'm aiming for something very simple -- a bare bones UI, and integration with a 
 
 ![UI Sketch](docs/ui-sketch.png)
 
-You're welcome to pick a technology stack and get started building in the way that you're most familiar with, or you can follow one of the paths I've set out.
+You're welcome to pick a technology stack and get started building in the way that you're most familiar with, or you can follow one of the paths I've already started.
 
-If you want to follow my paths, try one of these:
-- [Next.js])()
-  - Starting by building a simple front end in Next.js. 
+If you want to follow, you can choose from the following paths:
+
+- Next.js
+  - You could build the user interface (shown above) using Next.js and then compare it to what I built 
+  - Or simply switch to the [nextjs](/codiform/jargon-translator/tree/nextjs) branch and look at my implementation
+
+I will likely build out other paths, but this is the first available.
 
 ## Discuss
